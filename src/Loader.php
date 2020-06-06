@@ -35,10 +35,10 @@ class Loader
 
     public function npp_action_register_types()
     {
-        register_graphql_field('Post', 'next', [
-            'type' => 'Post',
+        register_graphql_field('Work', 'next', [
+            'type' => 'Work',
             'description' => __(
-                'Next post'
+                'Next work post'
             ),
             'resolve' => function (Post $post, array $args, AppContext $context) {
                 global $post;
@@ -57,10 +57,10 @@ class Loader
             },
         ]);
 
-        register_graphql_field('Post', 'previous', [
-            'type' => 'Post',
+        register_graphql_field('Work', 'previous', [
+            'type' => 'Work',
             'description' => __(
-                'Previous post'
+                'Previous work post'
             ),
 
             'resolve' => function (Post $post, array $args, AppContext $context) {
